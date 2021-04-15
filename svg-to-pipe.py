@@ -102,8 +102,8 @@ class Placer:
                 actor["entity"]["properties"][0]["value"]["values"].append(s)
     
     def write(self, save_json, debug=False):
-        #if debug:
-        #    print(json.dumps(self.actors, indent=" "))
+        if debug:
+            print(json.dumps(self.actors, indent=" "))
         save_json["actors"].extend(self.actors)
         save_json["components"].extend(self.components)
 
